@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Script 6.2</title>
+<link href="../css/global.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#main h2 {
+	background: url(images/open.png) no-repeat 0% 10%;
+	padding-left: 20px;
+	cursor: pointer;
+}
+#main h2.close {
+	background-image: url(images/close.png);
+}
+#main .answer {
+  background-color: white;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function( ) {
+ $('.answer').hide();
+ $('#main h2').toggle(
+		function() {
+	   $(this).next('.answer').fadeIn();
+		 $(this).addClass('close');
+		},
+		function() {
+		  $(this).next('.answer').fadeOut();
+			$(this).removeClass('close');
+	  }
+	); // end toggle
+});
+</script>
+</head>
+<body id="twoCol">
+<div id="container">
+  <div id="banner"><img src="../images/banner.png" alt="Quis Nostrud" width="760" height="65"><span id="badge"><a href="http://www.sawmac.com/missing/js/"></a></span></div>
+  <div id="contentWrap">
+    <div id="main">
+      <h1>A One Page FAQ</h1>
+      <h2>자바스크립트가 전설로만 전해오던 젊음의 샘이라고 들었습니다. 사실인가요?</h2>
+      <div class="answer">
+        <p>그렇습니다! 연구 결과에 의하면 자바스크립트를 공부하는 것은 정신을 맑게 하고 수명을 몇백년이나 연장시킨다고 합니다. (주의: 일부 과학자들은 이같은 명제에 동의하지 않습니다.)</p>
+      </div>
+      <h2>정말 자바스크립트가 저의 모든 문제를 해결할 수 있나요?</h2>
+      <div class="answer">
+        <p>그렇습니다! 자바스크립트는 다양한 용도로 사용할 수 있습니다. 재정 관리 조언도 가능하고, 심페소생술도 가능하며, 심지어 애완동물을 돌볼 수도 있습니다.</p>
+      </div>
+      <h2>자바스크립트로 할 수 없는 일은 없나요?</h2>
+      <div class="answer">
+        <p>당연히 없습니다! 보시다시피 한페이지짜리 FAQ도 만들 수 있죠!</p>
+      </div>
+    </div>
+    <div id="sidebar">
+      <h2>Script 6.2</h2>
+    </div>
+  </div>
+  <div id="footer"><em>&#8220;Building Interactive Web Sites with JavaScript&#8221;</em></div>
+</div>
+</body>
+</html>
